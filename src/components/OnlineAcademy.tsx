@@ -143,7 +143,7 @@ const ACADEMY_CURRICULUM: AcademyModule[] = [
         difficulty: "Advanced",
         description: "เรียนรู้พิกัดสวิงโถมน้ำหนักส่งถ่ายน้ำหนักลำตัวจาก ปลายเท้า-สะโพก-หัวไหล่ และข้อมือ เพื่อรีดสปีดลูกตบทะลุ 350+ km/h",
         descriptionThai: "วิธีตบแบบถูกต้องเพื่อถนอมเซฟข้อศอกและไหล่พาวเวอร์ฟูล",
-        youtubeId: "8BhQHzUaCPo",
+        youtubeId: "H7kpZ9inc10",
         points: 200,
         steps: [
           { title: "ขั้นตอนที่ 1: Body Coiling Setup", details: "ยืนด้านข้างบิดหัวไหล่ขวาไปข้างหลัง บิดสะโพกเปิดหน้าอกรับพลังสะสมคล้ายคันธนู" },
@@ -529,15 +529,23 @@ export default function OnlineAcademy({ user, onChangeUser }: OnlineAcademyProps
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-6">
             <div className="md:col-span-8 bg-slate-950 rounded-2xl relative overflow-hidden aspect-video border border-slate-800 flex flex-col items-center justify-center text-white">
               {playerViewMode === "video" && currentLesson.youtubeId ? (
-                <iframe
-                  id={`youtube-iframe-${currentLesson.youtubeId}`}
-                  src={`https://www.youtube.com/embed/${currentLesson.youtubeId}?rel=0&autoplay=0&hl=th&cc_load_policy=1`}
-                  title={currentLesson.titleThai}
-                  referrerPolicy="no-referrer"
-                  className="absolute inset-0 w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
+                <a
+                  href={`https://www.youtube.com/watch?v=${currentLesson.youtubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 w-full h-full flex flex-col items-center justify-center gap-4 group"
+                >
+                  <div className="w-20 h-20 bg-red-600 group-hover:bg-red-500 rounded-full flex items-center justify-center transition-all shadow-2xl shadow-red-900/50">
+                    <svg className="w-9 h-9 text-white fill-white pl-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                  <div className="text-center px-6">
+                    <p className="text-sm font-bold text-white">{currentLesson.titleThai}</p>
+                    <p className="text-xs text-slate-400 mt-1">คลิกเพื่อดูวิดีโอบน YouTube</p>
+                  </div>
+                  <span className="text-[10px] font-mono text-slate-500 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700">
+                    🔗 youtube.com/watch?v={currentLesson.youtubeId}
+                  </span>
+                </a>
               ) : (
                 <>
                   {/* Fake player container */}
