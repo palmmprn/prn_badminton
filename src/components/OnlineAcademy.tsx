@@ -41,7 +41,7 @@ const ACADEMY_CURRICULUM: AcademyModule[] = [
         difficulty: "Beginner",
         description: "การเรียนรู้มุมจับหน้าไม้เพื่อควบคุมทิศทางลูกหยอดและลูกเคลียร์ได้อย่างสมบูรณ์แบบเพื่อหลีกเลี่ยงการจับไม้รูปหน้ากระทะ",
         descriptionThai: "วีแชป (V-Shape) คือพื้นฐานจุดหมุนของข้อนิ้วโป้งและนิ้วชี้ในการรีดพลังตบและสะบัดข้อมือที่ดีที่สุด",
-        youtubeId: "50SFr0p2w4U",
+        youtubeId: "weNAgCeN7to",
         points: 100,
         steps: [
           { title: "ขั้นตอนที่ 1: V-Shape Alignment", details: "วางสันไม้แบดมินตันระหว่างนิ้วโป้งและนิ้วชี้ ปรับมุมสัมผัสหลวมระนาบตรง" },
@@ -57,7 +57,7 @@ const ACADEMY_CURRICULUM: AcademyModule[] = [
         difficulty: "Beginner",
         description: "หลักสูตรฝึกซ้อมสเต็ปฟุตเวิร์คการสไลด์และถอยก้าวคอร์ทแบดเพื่อเข้าจุดตีได้รวดเร็วที่สุดโดยสูญเสียพลังงานน้อยที่สุด",
         descriptionThai: "รวมตำแหน่งวิ่งไปแดนหน้า กลาง และหลัง ครอบคลุมทั่วทั้งสนาม",
-        youtubeId: "S2-8W63E-A4",
+        youtubeId: "a7ajExQKOvY",
         points: 100,
         steps: [
           { title: "ขั้นตอนที่ 1: Chassé Step", details: "เคลื่อนที่สไลด์ด้านข้างโดยไม่กระโดดข้ามขาสลับคอยควบคุมสมดุลลำตัว" },
@@ -106,7 +106,7 @@ const ACADEMY_CURRICULUM: AcademyModule[] = [
         difficulty: "Intermediate",
         description: "วิธีการหั่นหน้าไม้สัมผัสด้านข้างของขนนกเบาๆ ทำให้วิถีลูกเลียดตาข่ายม้วนตกลงอย่างฉับพลัน",
         descriptionThai: "ผู้เล่นตรงข้ามเดาจุดตกยากเนื่องจากเป็นท่าเลียนแบบลูกตบหัวไหล่เดียวกัน",
-        youtubeId: "gS6U7p8y_jU",
+        youtubeId: "K32fSOgKcaY",
         points: 150,
         steps: [
           { title: "ขั้นตอนที่ 1: Same Setup As Smash", details: "ตั้งหลักโยนไหล่และเหยียดมือซ้ายขึ้นทำท่าตบลูกเรียกร้องจุดสังเกตจากคู่ต่อสู้" },
@@ -143,7 +143,7 @@ const ACADEMY_CURRICULUM: AcademyModule[] = [
         difficulty: "Advanced",
         description: "เรียนรู้พิกัดสวิงโถมน้ำหนักส่งถ่ายน้ำหนักลำตัวจาก ปลายเท้า-สะโพก-หัวไหล่ และข้อมือ เพื่อรีดสปีดลูกตบทะลุ 350+ km/h",
         descriptionThai: "วิธีตบแบบถูกต้องเพื่อถนอมเซฟข้อศอกและไหล่พาวเวอร์ฟูล",
-        youtubeId: "B_wSshh-Y7I",
+        youtubeId: "8BhQHzUaCPo",
         points: 200,
         steps: [
           { title: "ขั้นตอนที่ 1: Body Coiling Setup", details: "ยืนด้านข้างบิดหัวไหล่ขวาไปข้างหลัง บิดสะโพกเปิดหน้าอกรับพลังสะสมคล้ายคันธนู" },
@@ -527,14 +527,14 @@ export default function OnlineAcademy({ user, onChangeUser }: OnlineAcademyProps
 
           {/* PLAYER GRID CONTAINER */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-6">
-            <div className="md:col-span-8 bg-slate-950 rounded-2xl relative overflow-hidden aspect-video border border-slate-850 flex flex-col items-center justify-center text-white">
+            <div className="md:col-span-8 bg-slate-950 rounded-2xl relative overflow-hidden aspect-video border border-slate-800 flex flex-col items-center justify-center text-white">
               {playerViewMode === "video" && currentLesson.youtubeId ? (
                 <iframe
                   id={`youtube-iframe-${currentLesson.youtubeId}`}
                   src={`https://www.youtube.com/embed/${currentLesson.youtubeId}?rel=0&autoplay=0&hl=th&cc_load_policy=1`}
                   title={currentLesson.titleThai}
                   referrerPolicy="no-referrer"
-                  className="absolute inset-0 w-full h-full border-0 rounded-2xl"
+                  className="absolute inset-0 w-full h-full border-0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                 />
