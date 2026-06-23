@@ -1,0 +1,6 @@
+{
+  "name": "PRN Badminton Center",
+  "description": "A comprehensive badminton platform featuring court booking with a real-time IoT scoreboard and simulation, pro-coaching schedules, and online lessons with dynamic certificate generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
