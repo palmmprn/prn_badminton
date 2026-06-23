@@ -526,8 +526,8 @@ export default function OnlineAcademy({ user, onChangeUser }: OnlineAcademyProps
           </div>
 
           {/* PLAYER GRID CONTAINER */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-6">
-            <div className="md:col-span-8 bg-slate-950 rounded-2xl relative overflow-hidden aspect-video border border-slate-800 flex flex-col items-center justify-center text-white">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start mb-6">
+            <div className="md:col-span-8"><div className="bg-slate-950 rounded-2xl relative overflow-hidden aspect-video border border-slate-800 flex flex-col items-center justify-center text-white">
               {playerViewMode === "video" && currentLesson.youtubeId ? (
                 <a
                   href={`https://www.youtube.com/watch?v=${currentLesson.youtubeId}`}
@@ -579,6 +579,7 @@ export default function OnlineAcademy({ user, onChangeUser }: OnlineAcademyProps
             </div>
 
             {/* Drill execution steps card next to video */}
+</div>
             <div className="md:col-span-4 bg-slate-50 border border-slate-200 rounded-2xl p-4 flex flex-col justify-between">
               <div>
                 <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
